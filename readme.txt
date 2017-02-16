@@ -1,12 +1,12 @@
 === Subpages Extended ===
 Contributors: mattsay
-Donate link: http://shailan.com/donate
+Donate link: http://metinsaylan.com/donate
 Tags: page list, pages, list pages, subpages, widget, shortcode, navigation, menu, auto, index, list, children, wp_list_pages
 Requires at least: 2.5
-Tested up to: 4.0
-Stable tag: 1.3.6
+Tested up to: 4.7.2
+Stable tag: 1.4
 
-A multi widget to list subpages of a page. It also comes with a `[subpages]` shortcode. You can find more widgets, plugins and themes at [shailan.com] (http://shailan.com).
+List subpages of your wordpress pages easily! It also comes with a `[subpages]` shortcode.
 
 == Description ==
 
@@ -38,13 +38,18 @@ Outputs:
 
 = Any questions? =
 
-You can ask your questions [here](http://shailan.com/contact)
+You can ask your questions [here](http://metinsaylan.com/contact)
 
 == Screenshots ==
 
 1. A snapshot of the widget form.
 
 == Changelog ==
+
+= 1.4 = 
+* Updated plugin support links.
+* Removed unused tweetable script and css.
+
 = 1.3.6 = 
 * Fixed: "_get_post_ancestors is deprecated" error. Thanks to Troy Templeman.
 
@@ -76,7 +81,7 @@ You can ask your questions [here](http://shailan.com/contact)
 = 1.2 =
 * Added sort options to the widget (Great thanks to Arkantos for the idea.)
 * Added all wp_list_pages options to the shortcode. Now shortcode is more powerful than before. 
-* Be sure to check shailan.com for great demo and examples.
+* Be sure to check metinsaylan.com for great demo and examples.
 
 = 1.1 = 
 * Added option to use Current page's title as widget title. (Great thanks to Thoschi for the idea.)

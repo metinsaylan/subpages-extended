@@ -1,11 +1,11 @@
 <?php 
 /*
 Plugin Name: Subpages Extended
-Plugin URI: http://shailan.com/wordpress/plugins/subpages-widget
-Description: A widget to list subpages of a page with an option to show subpages list on <strong>empty pages</strong>. It also comes with a <code>[subpages]</code> shortcode. You can read <a href="http://shailan.com/wordpress/plugins/subpages-widget#usage">how to use subpages</a> . You can find more widgets, plugins and themes at <a href="http://shailan.com">shailan.com</a>.
+Plugin URI: http://metinsaylan.com/wordpress/plugins/subpages-widget
+Description: A widget to list subpages of a page with an option to show subpages list on <strong>empty pages</strong>. It also comes with a <code>[subpages]</code> shortcode. You can read <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget#usage">how to use subpages</a> . You can find more widgets, plugins and themes at <a href="http://metinsaylan.com">metinsaylan.com</a>.
 Version: 1.3.6
-Author: Matt Say
-Author URI: http://shailan.com
+Author: Metin Saylan
+Author URI: http://metinsaylan.com
 */
 
 global $subpages_indexes;
@@ -182,16 +182,16 @@ class shailan_SubpagesWidget extends WP_Widget {
         ?>		
 		<div class="shailan-widget">
 		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('use_parent_title'); ?>" name="<?php echo $this->get_field_name('use_parent_title'); ?>"<?php checked( $use_parent_title ); ?> /> <label for="<?php echo $this->get_field_id('use_parent_title'); ?>"><?php _e( 'Use page title as widget title' , 'subpages-extended' ); ?></label>
-		<a href="http://shailan.com/wordpress/plugins/subpages-widget/help#title">(?)</a>
+		<a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#title">(?)</a>
 		</p>
 		
 		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('link_on_title'); ?>" name="<?php echo $this->get_field_name('link_on_title'); ?>"<?php checked( $link_on_title ); ?> /> <label for="<?php echo $this->get_field_id('link_on_title'); ?>"><?php _e( 'Use link on title' , 'subpages-extended' ); ?></label>
-		<a href="http://shailan.com/wordpress/plugins/subpages-widget/help#title-link">(?)</a>
+		<a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#title-link">(?)</a>
 		</p>
 		
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title :'); ?> <a href="http://shailan.com/wordpress/plugins/subpages-widget/help#title">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title :'); ?> <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#title">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
 		
-		<p><label for="<?php echo $this->get_field_id('childof'); ?>"><?php _e('Parent (Subpages of):'); ?> <a href="http://shailan.com/wordpress/plugins/subpages-widget/help#parent">(?)</a> <?php 
+		<p><label for="<?php echo $this->get_field_id('childof'); ?>"><?php _e('Parent (Subpages of):'); ?> <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#parent">(?)</a> <?php 
 			$args = array( 
 				'selected' => $childof,
 				'show_option_no_change' => '*Current page*', 
@@ -201,13 +201,13 @@ class shailan_SubpagesWidget extends WP_Widget {
 				'id' => $this->get_field_id('childof') 
 			); shailan_subpages_dropdown_pages($args); ?></label></p>
 			
-		<p><label for="<?php echo $this->get_field_id('rel'); ?>"><?php _e('Rel :'); ?> <a href="http://shailan.com/wordpress/plugins/subpages-widget/help#rel">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('rel'); ?>" name="<?php echo $this->get_field_name('rel'); ?>" type="text" value="<?php echo $rel; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('rel'); ?>"><?php _e('Rel :'); ?> <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#rel">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('rel'); ?>" name="<?php echo $this->get_field_name('rel'); ?>" type="text" value="<?php echo $rel; ?>" /></label></p>
 		
 			
-		<p><label for="<?php echo $this->get_field_id('exclude'); ?>"><?php _e('Exclude:'); ?> <a href="http://shailan.com/wordpress/plugins/subpages-widget/help#exclude">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('exclude'); ?>" name="<?php echo $this->get_field_name('exclude'); ?>" type="text" value="<?php echo $exclude; ?>" /></label><br /> 
+		<p><label for="<?php echo $this->get_field_id('exclude'); ?>"><?php _e('Exclude:'); ?> <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#exclude">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('exclude'); ?>" name="<?php echo $this->get_field_name('exclude'); ?>" type="text" value="<?php echo $exclude; ?>" /></label><br /> 
 		<small>Page IDs, separated by commas.</small></p>
 		
-		<p><label for="<?php echo $this->get_field_id('sort_column'); ?>"><?php _e('Sort by :'); ?> <a href="http://shailan.com/wordpress/plugins/subpages-widget/help#sort-by">(?)</a> <select name="<?php echo $this->get_field_name('sort_column'); ?>" id="<?php echo $this->get_field_id('sort_column'); ?>" ><?php 
+		<p><label for="<?php echo $this->get_field_id('sort_column'); ?>"><?php _e('Sort by :'); ?> <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#sort-by">(?)</a> <select name="<?php echo $this->get_field_name('sort_column'); ?>" id="<?php echo $this->get_field_id('sort_column'); ?>" ><?php 
   foreach ($this->sort_options as $value=>$key) {  
   	$option = '<option value="'. $key .'" '. ( $key == $sort_column ? ' selected="selected"' : '' ) .'>';
 	$option .= $value;
@@ -217,15 +217,15 @@ class shailan_SubpagesWidget extends WP_Widget {
  ?>
 </select></label></p>
 		
-		<p><label for="<?php echo $this->get_field_id('depth'); ?>"><?php _e('Depth:'); ?> <a href="http://shailan.com/wordpress/plugins/subpages-widget/help#depth">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('depth'); ?>" name="<?php echo $this->get_field_name('depth'); ?>" type="text" value="<?php echo $depth; ?>" /></label><br /> 
+		<p><label for="<?php echo $this->get_field_id('depth'); ?>"><?php _e('Depth:'); ?> <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#depth">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('depth'); ?>" name="<?php echo $this->get_field_name('depth'); ?>" type="text" value="<?php echo $depth; ?>" /></label><br /> 
 		<small>Depth of menu.</small></p>
 		
 		<!-- <p><input type="checkbox" class="checkbox" id="<?php //echo $this->get_field_id('use_menu_labels'); ?>" name="<?php //echo $this->get_field_name('use_menu_labels'); ?>"<?php //checked( $use_menu_labels ); ?> /> <label for="<?php //echo $this->get_field_id('use_menu_labels'); ?>"><?php //_e( 'Use menu labels for page title.' , 'subpages-extended' ); ?></label>
-		<a href="http://shailan.com/wordpress/plugins/subpages-widget/help#using-menu-labels">(?)</a>
+		<a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help#using-menu-labels">(?)</a>
 		</p> -->
 		
 		<div class="widget-control-actions">
-			<p><small>Powered by <a href="http://shailan.com/wordpress/plugins/subpages-widget" title="Wordpress Tips and tricks, Freelancing, Web Design (opens in new window)" target="_blank">Shailan.com</a> | <a href="http://shailan.com/wordpress/" title="Get more wordpress widgets and themes (opens in new window)" target="_blank">Get more..</a></small></p>
+			<p><small>Powered by <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget" title="Wordpress Tips and tricks, Freelancing, Web Design (opens in new window)" target="_blank">metinsaylan.com</a> | <a href="http://metinsaylan.com/wordpress/" title="Get more wordpress widgets and themes (opens in new window)" target="_blank">Get more..</a></small></p>
 		</div>
 		</div>
         <?php 
@@ -244,10 +244,7 @@ function subpages_widget_adminMenu(){
 
 	if(is_admin()){ 
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'tweetable', WP_PLUGIN_URL . '/subpages-extended/js/jquery.tweetable.js', 'jquery' );
-		wp_enqueue_script( 'subpages-admin', WP_PLUGIN_URL . '/subpages-extended/js/admin.js', 'jquery' );
 		wp_enqueue_style( 'subpages-extended', WP_PLUGIN_URL . '/subpages-extended/css/subpages.css' );
-		wp_enqueue_style( 'tweetable', WP_PLUGIN_URL . '/subpages-extended/css/tweetable.css' );
 	};
 
 	if ( @$_GET['page'] == 'subpages-extended' ) {
@@ -274,7 +271,7 @@ function subpages_widget_options_page(){
 <?php screen_icon(); ?>
 <h2><?php echo esc_html( $title ); ?></h2>
 
-<div class="nav"><small><a href="http://shailan.com/wordpress/plugins/subpages-widget">Plugin page</a> | <a href="http://shailan.com/wordpress/plugins/subpages-widget/help">Usage</a> | <a href="http://shailan.com/wordpress/plugins/subpages-widget/shortcode">Shortcode</a> | <a href="http://shailan.com/donate">Donate</a> | <a href="http://shailan.com/wordpress">Get more widgets..</a></small></div>
+<div class="nav"><small><a href="http://metinsaylan.com/wordpress/plugins/subpages-widget">Plugin page</a> | <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/help">Usage</a> | <a href="http://metinsaylan.com/wordpress/plugins/subpages-widget/shortcode">Shortcode</a> | <a href="http://metinsaylan.com/donate">Donate</a> | <a href="http://metinsaylan.com/wordpress">Get more widgets..</a></small></div>
 
 <div class="share">
 	<div class="share-label">
@@ -282,12 +279,12 @@ function subpages_widget_options_page(){
 	</div>
 
 	<div class="share-button tweet">
-		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://shailan.com/wordpress/plugins/subpages-widget/" data-text="I am using subpages extended #widget on my #wordpress blog, Check this out!" data-count="horizontal" data-via="shailancom">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+		<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://metinsaylan.com/wordpress/plugins/subpages-widget/" data-text="I am using subpages extended #widget on my #wordpress blog, Check this out!" data-count="horizontal" data-via="shailancom">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 	</div>
 
 	<div class="share-button facebook">
 		<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
-		<fb:like href="http://shailan.com/wordpress/plugins/subpages-widget/" ref="plugin_options" show_faces="false" width="400" font="segoe ui"></fb:like>
+		<fb:like href="http://metinsaylan.com/wordpress/plugins/subpages-widget/" ref="plugin_options" show_faces="false" width="400" font="segoe ui"></fb:like>
 	</div>
 	
 	<div class="clear"></div>
@@ -323,15 +320,14 @@ function subpages_widget_options_page(){
  
 </form>
 
-<table><tr><td width="400" valign="top" class="panel" >
 <div id="shailancom" style="background:#ededed; border-top:10px solid #ff9966; padding:15px;">
-<h3>Latest headlines from Shailan.com</h3>
+<h3>Latest headlines from MetinSaylan.com</h3>
 		<?php	
 			
 			$rss_options = array(
-				'link' => 'http://shailan.com',
-				'url' => 'http://shailan.com/feed',
-				'title' => 'Shailan.com',
+				'link' => 'http://metinsaylan.com',
+				'url' => 'http://metinsaylan.com/feed',
+				'title' => 'MetinSaylan.com',
 				'items' => 5,
 				'show_summary' => 0,
 				'show_author' => 0,
@@ -341,23 +337,9 @@ function subpages_widget_options_page(){
 
 			wp_widget_rss_output( $rss_options ); ?>
 </div>
-</td><td width="400" valign="top" class="panel" >
-<div id="twit" style="background:#ededed; border-top:10px solid #68d8fd; padding:15px;">
-<h3>My latest tweets</h3>
-<div id="tweets">
-</div>
-</div>
-</td></tr>
-</table>
-
-<script type="text/javascript"> 
-jQuery(document).ready(function($) {
-	$('#tweets').tweetable({username: 'shailancom', time: false, limit: 2, replies: false});
-});
-</script> 
 
 <p>
-<small><a href="http://shailan.com/wordpress/plugins/subpages-widget" rel="external" target="_blank">Subpages Extended</a> by <a href="http://shailan.com">shailan</a>.</small>
+<small><a href="http://metinsaylan.com/wordpress/plugins/subpages-widget" rel="external" target="_blank">Subpages Extended</a> by <a href="http://metinsaylan.com">Metin Saylan</a>.</small>
 </p>
 
 </div>

@@ -4,7 +4,7 @@ Donate link: http://metinsaylan.com/donate
 Tags: page list, pages, list pages, subpages, widget, shortcode, navigation, menu, auto, index, list, children, wp_list_pages
 Requires at least: 3.0
 Tested up to: 4.8.2
-Stable tag: 1.5
+Stable tag: 1.5.1
 
 List subpages of your WordPress pages easily! Comes with a `[subpages]` shortcode.
 
@@ -16,6 +16,7 @@ Basic shortcode usage:
 `[subpages exceptme="true" childof="253"]`
 
 *Features*
+
 * Auto-insert sub pages navigation on blank pages
 * Use current page title as widget title
 * Display sub-pages of another page

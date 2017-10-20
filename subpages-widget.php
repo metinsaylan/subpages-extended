@@ -3,7 +3,7 @@
 Plugin Name: Subpages Extended
 Plugin URI: http://metinsaylan.com/projects/wordpress/subpages-extended/
 Description: List sub pages of any page, using shortcode and widget. Visit <a href="options-general.php?page=subpages-extended">settings page</a> for auto-insert option.
-Version: 1.5
+Version: 1.5.1
 Author: Metin Saylan
 Author URI: http://metinsaylan.com
 Text Domain: subpages-extended

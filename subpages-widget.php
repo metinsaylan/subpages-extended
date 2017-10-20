@@ -6,6 +6,7 @@ Description: List sub pages of any page, using shortcode and widget. Visit <a hr
 Version: 1.5
 Author: Metin Saylan
 Author URI: http://metinsaylan.com
+Text Domain: subpages-extended
 */
 
 global $subpages_indexes;

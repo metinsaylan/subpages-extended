@@ -28,16 +28,3 @@ If you like this plugin, please [donate](http://metinsaylan.com/donate/).
 
 Please report issues on [Github Issues Page](https://github.com/shailancom/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 Visit source on [github](https://github.com/shailancom/subpages-extended)
-
-## Installation  
-
-1. Download the widget and upload it to your server through `WP Admin -> Plugins -> Add New -> Upload`
-1. After the upload is complete activate the plugin.
-1. Go to Appearance -> Widgets page, drag and drop the widget to your sidebar.
-1. Fill in the blanks as needed, and done!
-
-## Frequently Asked Questions  
-
-= Any questions? =
-
-You can DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).

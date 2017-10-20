@@ -51,6 +51,10 @@ You can DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 == Screenshots ==
 
 1. A snapshot of the widget form.
+2. Widget in action.
+3. Adding shortcode to a page.
+4. Shortcode in action.
+5. Options page.
 
 == Changelog ==
 

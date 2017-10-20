@@ -2,30 +2,38 @@
 Contributors: mattsay
 Donate link: http://metinsaylan.com/donate
 Tags: page list, pages, list pages, subpages, widget, shortcode, navigation, menu, auto, index, list, children, wp_list_pages
-Requires at least: 2.5
-Tested up to: 4.7.2
-Stable tag: 1.4
+Requires at least: 3.0
+Tested up to: 4.8.2
+Stable tag: 1.5
 
-List subpages of your wordpress pages easily! It also comes with a `[subpages]` shortcode.
+List subpages of your WordPress pages easily! Comes with a `[subpages]` shortcode.
 
 == Description ==
 
-This widget displays subpages of a page easily. You can automatically display subpages list on empty pages. Though it's main power is the `[subpages]` shortcode. Using this shortcode on a page you can create subpage indexes. You can view live demo on my wordpress page. It automatically generates subpage indexes. You can also list subpages of another page using the childof attribute of shortcode. It supports all wp_list_pages functionality via shortcode. See the examples below:
+Using this plugin you can display a sub-pages navigation (table of contents) on your pages and on your sidebar. Widget option is so easy to use, and the shortcode option gives you more control for manipulating your subpages menus.
 
-Here are subpages of my wordpress page with a depth level of 1:
-`[subpages depth="1" childof="286"]`
+Basic shortcode usage:
+`[subpages exceptme="true" childof="253"]`
 
-Outputs:
+*Features*
+* Auto-insert sub pages navigation on blank pages
+* Use current page title as widget title
+* Display sub-pages of another page
+* Add `rel="nofollow"` to links
+* Exclude pages
+* Change sort order
+* Change menu depth
 
-* Plugins
-* Themes
+*Documentation & Simple Tutorials*
 
-If the page doesn’t have any subpages it will display the following error for you to fix it:
-`[subpages depth="1" childof="257"]`
+* [Subpages Extended Shortcode Usage](http://metinsaylan.com/projects/wordpress/subpages-extended/#shortcode)
+* [Changing page sorting option (eg. using page order)](http://metinsaylan.com/wordpress/2011/01/20/subpages-extended-sorting-your-pages-list-with-shortcode/)
+* [All posts tagged `Subpages Extended`](http://metinsaylan.com/tag/subpages-extended/)
 
-Outputs: 
+If you like this plugin, please [donate](http://metinsaylan.com/donate/).
 
-"Services" doesn't have any sub pages.
+Please report issues on [Github Issues Page](https://github.com/shailancom/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
+Visit source on [github](https://github.com/shailancom/subpages-extended)
 
 == Installation ==
 
@@ -38,7 +46,7 @@ Outputs:
 
 = Any questions? =
 
-You can ask your questions [here](http://metinsaylan.com/contact)
+You can DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 
 == Screenshots ==
 
@@ -46,54 +54,8 @@ You can ask your questions [here](http://metinsaylan.com/contact)
 
 == Changelog ==
 
-= 1.4 = 
-* Updated plugin support links.
-* Removed unused tweetable script and css.
+= 1.5 =
 
-= 1.3.6 = 
-* Fixed: "_get_post_ancestors is deprecated" error. Thanks to Troy Templeman.
-
-= 1.3.5 = 
-* Tested up to WP 4.0
-
-= 1.3.4 = 
-* Added: Rel option for shortcode & widget.
-* Removed: Use menu labels options from widget & shortcode. Plugin uses menu label if it exists.
-
-= 1.3.3 = 
-* Fixed: Subpages widget is not visible on home page if a certain page is selected.
-
-= 1.3.2 =
-* Minor fix. Removed walker option from shortcode attributes. It was giving errors since one can't supply object in a shortcode. Use use_menu_labels option to switch current walker.
-
-= 1.3.1 =
-* Fixed `\n\t` output on empty pages with no children.
-* Added some styling.
-
-= 1.3 =
-* Added use link on title option.
-* Added `*Full Branch*` option to Parent which allows listing subpages until topmost page.
-* Added `Use Menu Labels` option and added Menu Label meta box to allow using shorter menu labels for pages that have a long name. This box is seen on right side on the edit page screen.
-
-= 1.2.1 =
-* Fixed top pages show all pages when `*Parent of current page*` selected in the widget. Thanks to Wouter Bruijning for pointing out this error.
-
-= 1.2 =
-* Added sort options to the widget (Great thanks to Arkantos for the idea.)
-* Added all wp_list_pages options to the shortcode. Now shortcode is more powerful than before. 
-* Be sure to check metinsaylan.com for great demo and examples.
-
-= 1.1 = 
-* Added option to use Current page's title as widget title. (Great thanks to Thoschi for the idea.)
-* Added shortcode option title="*current*" to display current page's title.
-* Added pages dropdown selector to the widget for ease of use.
-* Added shortcode option for childof="parent".
-
-= 1.0.2 = 
-* Added option for automatically displaying subpages on empty pages.
-
-= 1.0.1 =
-* Fixed version.
-
-= 1.0 =
-* First release.
+* Fixed walker class errors.
+* Fixed widget help links.
+* Updated readme & documentation links.

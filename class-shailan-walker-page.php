@@ -1,29 +1,29 @@
-<?php 
+<?php
 
 class Shailan_Walker_Page extends Walker {
 
 	var $tree_type = 'page';
 	var $db_fields = array ('parent' => 'post_parent', 'id' => 'ID');
-	var $_rel = ''; 
+	var $_rel = '';
 
 	function set_rel($rel){
 		global $_rel;
 		$_rel = $rel;
 	}
-	
-	function start_lvl(&$output, $depth) {
+
+	function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "\n$indent<ul class='children'>\n";
 	}
 
-	function end_lvl(&$output, $depth) {
+	function end_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
 		$output .= "$indent</ul>\n";
 	}
 
-	function start_el(&$output, $page, $depth, $args, $current_page) {
+	function start_el( &$output, $page, $depth = 0, $args = array(), $current_page = 0 ) {
 		global $_rel;
-	
+
 		if ( $depth )
 			$indent = str_repeat("\t", $depth);
 		else
@@ -44,7 +44,7 @@ class Shailan_Walker_Page extends Walker {
 			$css_class[] = 'current_page_parent';
 		}
 
-		$css_class = implode(' ', apply_filters('page_css_class', $css_class, $page));
+		$css_class = implode(' ', apply_filters( 'page_css_class', $css_class, $page, $depth, $args, $current_page ) );
 
 		$output .= $indent . '<li class="' . $css_class . '"><a href="' . get_permalink($page->ID) . '" title="' . esc_attr( wp_strip_all_tags( apply_filters( 'the_title', $page->post_title, $page->ID ) ) ) . '" rel="'. $_rel .'">' . $link_before . apply_filters( 'walker_page_title', $page->post_title, $page->ID ) . $link_after . '</a>';
 
@@ -54,11 +54,11 @@ class Shailan_Walker_Page extends Walker {
 			else
 				$time = $page->post_date;
 
-			$output .= " " . mysql2date($date_format, $time);
+			$output .= " " . mysql2date( $date_format, $time );
 		}
 	}
 
-	function end_el(&$output, $page, $depth) {
+	function end_el( &$output, $page, $depth = 0, $args = array() ) {
 		$output .= "</li>\n";
 	}
 

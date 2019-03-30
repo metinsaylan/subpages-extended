@@ -2,22 +2,22 @@
 Contributors: mattsay
 Donate link: http://metinsaylan.com/donate
 Tags: page list, pages, list pages, subpages, widget, shortcode, navigation, menu, auto, index, list, children, wp_list_pages
-Requires at least: 3.0
-Tested up to: 5.0.3
-Stable tag: 1.5.2
+Requires at least: 5.0
+Tested up to: 5.1.1
+Stable tag: 1.6
 
 List subpages of your WordPress pages easily! Comes with a `[subpages]` shortcode.
 
 == Description ==
 
-Using this plugin you can display a sub-pages navigation (table of contents) on your pages and on your sidebar. Widget option is so easy to use, and the shortcode option gives you more control for manipulating your subpages menus.
+A Sub-pages navigation (table of contents) on your pages and on your sidebar. Widget option is so easy to use, and the shortcode option gives you more control for manipulating your subpages menus.
 
 Basic shortcode usage:
 `[subpages exceptme="true" childof="253"]`
 
 *Features*
 
-* Auto-insert sub pages navigation on blank pages
+* Auto-insert navigation on blank pages (Enable on options page)
 * Use current page title as widget title
 * Display sub-pages of another page
 * Add `rel="nofollow"` to links
@@ -33,8 +33,8 @@ Basic shortcode usage:
 
 If you like this plugin, please [donate](http://metinsaylan.com/donate/).
 
-Please report issues on [Github Issues Page](https://github.com/shailancom/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
-Visit source on [github](https://github.com/shailancom/subpages-extended)
+Please report issues on [Github Issues Page](https://github.com/metinsaylan/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
+Visit source on [github](https://github.com/metinsaylan/subpages-extended)
 
 == Installation ==
 
@@ -59,13 +59,9 @@ You can DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 
 == Changelog ==
 
-= 1.5.3 =
-* Update link styles, open help links on new tab
-* Remove deprecated screen_icon function call
-* Update version and tested up to version tags
+= 1.6 = 
+* Fixed create_function error
+* Updated options page styling
+* Improved auto-insert performance
 
-= 1.5 =
-
-* Fixed walker class errors.
-* Fixed widget help links.
-* Updated readme & documentation links.
+[View Previous Versions](https://github.com/metinsaylan/subpages-extended/blob/master/CHANGELOG.md)

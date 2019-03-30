@@ -219,4 +219,6 @@ class shailan_SubpagesWidget extends WP_Widget {
 } // class shailan_SubpagesWidget
 
 // register widget
-add_action('widgets_init', create_function('', 'return register_widget("shailan_SubpagesWidget");'));
+add_action('widgets_init', function(){
+	register_widget("shailan_SubpagesWidget");
+});

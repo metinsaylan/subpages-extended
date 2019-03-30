@@ -26,5 +26,5 @@ Basic shortcode usage:
 
 If you like this plugin, please [donate](http://metinsaylan.com/donate/).
 
-Please report issues on [Github Issues Page](https://github.com/shailancom/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
-Visit source on [github](https://github.com/shailancom/subpages-extended)
+Please report issues on [Github Issues Page](https://github.com/metinsaylan/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
+Visit source on [github](https://github.com/metinsaylan/subpages-extended)

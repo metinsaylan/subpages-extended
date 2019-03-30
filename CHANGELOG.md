@@ -2,6 +2,17 @@
 
 All changes to [Subpages Extended Widget](http://metinsaylan.com/projects/wordpress/subpages-extended/) can be found on this page.
 
+### 1.5.3
+* Update link styles, open help links on new tab
+* Remove deprecated screen_icon function call
+* Update version and tested up to version tags
+
+### 1.5
+
+* Fixed walker class errors.
+* Fixed widget help links.
+* Updated readme & documentation links.
+
 ### 1.4
 * Updated plugin support links.
 * Removed unused tweetable script and css.

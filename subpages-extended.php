@@ -156,17 +156,31 @@ class shailan_SubpagesWidget extends WP_Widget {
 
         ?>
 
+<style>a.help-link {
+    background: #eee;
+    border-radius: 50%;
+    display: inline-block;
+    height: 16px;
+    width: 16px;
+    padding: 0;
+    color: #0085ba;
+    text-align: center;
+    line-height: 15px;
+    text-decoration: none;
+    border: 1px solid;
+}</style>
+
 		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('use_parent_title'); ?>" name="<?php echo $this->get_field_name('use_parent_title'); ?>"<?php checked( $use_parent_title ); ?> /> <label for="<?php echo $this->get_field_id('use_parent_title'); ?>"><?php _e( 'Use page title as widget title' , 'subpages-extended' ); ?></label>
-		<a href="<?php echo $this->help_page; ?>#title">(?)</a>
+		<a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#title">?</a>
 		</p>
 
-		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('link_on_title'); ?>" name="<?php echo $this->get_field_name('link_on_title'); ?>"<?php checked( $link_on_title ); ?> /> <label for="<?php echo $this->get_field_id('link_on_title'); ?>"><?php _e( 'Use link on title' , 'subpages-extended' ); ?></label>
-		<a href="<?php echo $this->help_page; ?>#title-link">(?)</a>
+		<p><input type="checkbox" class="checkbox" id="<?php echo $this->get_field_id('link_on_title'); ?>" name="<?php echo $this->get_field_name('link_on_title'); ?>"<?php checked( $link_on_title ); ?> /> <label for="<?php echo $this->get_field_id('link_on_title'); ?>"><?php _e( 'Use link on widget title' , 'subpages-extended' ); ?></label>
+		<a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#title-link">?</a>
 		</p>
 
-		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title :'); ?> <a href="<?php echo $this->help_page; ?>#title">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('title'); ?>"><?php _e('Title :'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#title">?</a> <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></label></p>
 
-		<p><label for="<?php echo $this->get_field_id('childof'); ?>"><?php _e('Parent (Subpages of):'); ?> <a href="<?php echo $this->help_page; ?>#parent">(?)</a> <?php
+		<p><label for="<?php echo $this->get_field_id('childof'); ?>"><?php _e('Parent (Subpages of):'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#parent">?</a> <?php
 			$args = array(
 				'selected' => $childof,
 				'show_option_no_change' => '*Current page*',
@@ -176,13 +190,13 @@ class shailan_SubpagesWidget extends WP_Widget {
 				'id' => $this->get_field_id('childof')
 			); shailan_subpages_dropdown_pages($args); ?></label></p>
 
-		<p><label for="<?php echo $this->get_field_id('rel'); ?>"><?php _e('Rel :'); ?> <a href="<?php echo $this->help_page; ?>#rel">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('rel'); ?>" name="<?php echo $this->get_field_name('rel'); ?>" type="text" value="<?php echo $rel; ?>" /></label></p>
+		<p><label for="<?php echo $this->get_field_id('rel'); ?>"><?php _e('Rel :'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#rel">?</a> <input class="widefat" id="<?php echo $this->get_field_id('rel'); ?>" name="<?php echo $this->get_field_name('rel'); ?>" type="text" value="<?php echo $rel; ?>" /></label></p>
 
 
-		<p><label for="<?php echo $this->get_field_id('exclude'); ?>"><?php _e('Exclude:'); ?> <a href="<?php echo $this->help_page; ?>#exclude">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('exclude'); ?>" name="<?php echo $this->get_field_name('exclude'); ?>" type="text" value="<?php echo $exclude; ?>" /></label><br />
+		<p><label for="<?php echo $this->get_field_id('exclude'); ?>"><?php _e('Exclude:'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#exclude">?</a> <input class="widefat" id="<?php echo $this->get_field_id('exclude'); ?>" name="<?php echo $this->get_field_name('exclude'); ?>" type="text" value="<?php echo $exclude; ?>" /></label><br />
 		<small>Page IDs, separated by commas.</small></p>
 
-		<p><label for="<?php echo $this->get_field_id('sort_column'); ?>"><?php _e('Sort by :'); ?> <a href="<?php echo $this->help_page; ?>#sort-by">(?)</a> <select name="<?php echo $this->get_field_name('sort_column'); ?>" id="<?php echo $this->get_field_id('sort_column'); ?>" ><?php
+		<p><label for="<?php echo $this->get_field_id('sort_column'); ?>"><?php _e('Sort by :'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#sort-by">?</a> <select name="<?php echo $this->get_field_name('sort_column'); ?>" id="<?php echo $this->get_field_id('sort_column'); ?>" ><?php
   foreach ($this->sort_options as $value=>$key) {
   	$option = '<option value="'. $key .'" '. ( $key == $sort_column ? ' selected="selected"' : '' ) .'>';
 	$option .= $value;
@@ -192,7 +206,7 @@ class shailan_SubpagesWidget extends WP_Widget {
  ?>
 </select></label></p>
 
-		<p><label for="<?php echo $this->get_field_id('depth'); ?>"><?php _e('Depth:'); ?> <a href="<?php echo $this->help_page; ?>#depth">(?)</a> <input class="widefat" id="<?php echo $this->get_field_id('depth'); ?>" name="<?php echo $this->get_field_name('depth'); ?>" type="text" value="<?php echo $depth; ?>" /></label><br />
+		<p><label for="<?php echo $this->get_field_id('depth'); ?>"><?php _e('Depth:'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#depth">?</a> <input class="widefat" id="<?php echo $this->get_field_id('depth'); ?>" name="<?php echo $this->get_field_name('depth'); ?>" type="text" value="<?php echo $depth; ?>" /></label><br />
 		<small>Depth of menu.</small></p>
 
         <?php

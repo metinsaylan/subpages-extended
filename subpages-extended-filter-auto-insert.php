@@ -1,19 +1,25 @@
 <?php
 
+/* Inserts automatic subpages indexes on empty pages */
+add_filter('the_content', 'shailan_subpages_filter');
 function shailan_subpages_filter($content){
 	global $post;
 
-	$autoinsert = ! (bool) get_option( 'subpages_extended_auto_insert');
+	/* If there is content, return */
+	if( strlen($content) != 0 )
+		return $content;
 
-	if( strlen($content) != 0 || $autoinsert )
+	/* Check auto-insert option */
+	$autoInsertEnabled = (bool) get_option( 'subpages_extended_auto_insert');
+	if( ! $autoInsertEnabled )
 		return $content;
 
 	$parent = $post->ID;
-	$children = wp_list_pages( 'echo=0&child_of=' . $parent . '&title_li=' );
+	$children = get_pages( array( 'child_of' => $parent ) );
 	$depth = 4;
 	$exclude = '';
 
-	if ($children) {
+	if ( ! empty( $children ) ) {
 		ob_start();
 		?>
 		<div class="shailan-subpages-container">
@@ -29,4 +35,4 @@ function shailan_subpages_filter($content){
 	}
 }
 
-add_filter('the_content', 'shailan_subpages_filter');
+

@@ -48,6 +48,10 @@ class shailan_SubpagesWidget extends WP_Widget {
     /** @see WP_Widget::widget */
     function widget($args, $instance) {
 			global $post;
+	    
+			if ( is_null( $post ) ) {
+				return;
+			}
 
 			extract( $args );
 			$widget_options = wp_parse_args( $instance, $this->widget_defaults );

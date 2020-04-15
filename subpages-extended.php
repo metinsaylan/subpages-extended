@@ -82,7 +82,7 @@ class shailan_SubpagesWidget extends WP_Widget {
 				$is_visible = true;
 			}
 
-			if( is_page() || $is_visible ){
+			if( (is_singular() && is_post_type_hierarchical($post->post_type)) || $is_visible ){
 
 				$parent = $childof;
 
@@ -103,9 +103,10 @@ class shailan_SubpagesWidget extends WP_Widget {
 
 				if( !$use_parent_title ){ $title = apply_filters('widget_title', $title); }
 
-				$children=wp_list_pages( 'echo=0&child_of=' . $parent . '&title_li=' );
+				$children=wp_list_pages( 'echo=0&child_of=' . $parent . '&title_li=&post_type=' . $post->post_type );
 
 				$subpage_args = array(
+					'post_type'    => $post->post_type,
 					'depth'        => $depth,
 					'show_date'    => 0,
 					'date_format'  => get_option('date_format'),

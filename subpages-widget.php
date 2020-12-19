@@ -3,7 +3,7 @@
  * Plugin Name: Subpages Extended
  * Plugin URI: https://wpassist.me/plugins/subpages-widget/
  * Description: Display a list of sub pages using widget, shortcode or auto-insert functionality.
- * Version: 1.7
+ * Version: 1.6.5
  * Author: WPAssist
  * Author URI: https://wpassist.me/
  * Text Domain: subpages-extended

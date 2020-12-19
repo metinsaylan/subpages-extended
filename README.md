@@ -1,6 +1,6 @@
 # Subpages Extended
 
-List subpages of your WordPress pages easily! Comes with a `[subpages]` shortcode.
+Display a list of sub pages using widget, shortcode or auto-insert functionality. 
 
 ## Description  
 
@@ -20,11 +20,11 @@ Basic shortcode usage:
 
 *Documentation & Simple Tutorials*
 
-* [Subpages Extended Shortcode Usage](http://metinsaylan.com/projects/wordpress/subpages-extended/#shortcode)
-* [Changing page sorting option (eg. using page order)](http://metinsaylan.com/wordpress/2011/01/20/subpages-extended-sorting-your-pages-list-with-shortcode/)
-* [All posts tagged `Subpages Extended`](http://metinsaylan.com/tag/subpages-extended/)
+* [Subpages Extended Shortcode Usage](https://wpassist.me/docs/subpages-extended-shortcode/)
+* [Changing page sorting option (eg. using page order)](https://wpassist.me/subpages-extended-sorting-your-pages-list-with-shortcode/)
+* [All posts tagged `Subpages Extended`](https://wpassist.me/tag/subpages-extended/)
 
-If you like this plugin, please [donate](http://metinsaylan.com/donate/).
+If you like this plugin, please [donate](https://wpassist.me/donate/).
 
 Please report issues on [Github Issues Page](https://github.com/metinsaylan/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 Visit source on [github](https://github.com/metinsaylan/subpages-extended)

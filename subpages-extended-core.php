@@ -35,19 +35,19 @@ if ( ! defined( 'ABSPATH' ) ) {
     $subpages_extended->options_nav = array( 
         array(
             'label' => 'Plugin Page',
-            'link' => 'https://metinsaylan.com/wordpress/plugins/subpages-widget/'
+            'link' => 'https://wpassist.me/plugins/subpages-widget/'
         ),
         array(
             'label' => 'Usage',
-            'link' => 'https://metinsaylan.com/docs/subpages-extended-help/'
+            'link' => 'https://wpassist.me/docs/subpages-extended-help/'
         ),
         array(
             'label' => 'Shortcode',
-            'link' => 'https://metinsaylan.com/docs/subpages-extended-shortcode/'
+            'link' => 'https://wpassist.me/docs/subpages-extended-shortcode/'
         ),
         array(
             'label' => 'Donate',
-            'link' => 'http://metinsaylan.com/donate/'
+            'link' => 'https://wpassist.me/donate/'
         )
     );
 

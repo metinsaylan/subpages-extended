@@ -2,6 +2,9 @@
 
 All changes to [Subpages Extended Widget](https://wpassist.me/projects/wordpress/subpages-extended/) can be found on this page.
 
+### 1.6.6
+* fix for sort option
+
 ### 1.6.5
 * fix for wp_dropdown_pages filter
 * fix for sort_column error

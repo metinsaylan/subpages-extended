@@ -4,7 +4,7 @@ Donate link: http://wpassist.me/donate
 Tags: page list, pages, list pages, subpages, widget, shortcode, navigation, menu, auto, index, list, children, wp_list_pages
 Requires at least: 5.0
 Tested up to: 5.6
-Stable tag: 1.6.5
+Stable tag: 1.6.6
 
 List subpages of your WordPress pages easily! Comes with a `[subpages]` shortcode.
 
@@ -58,6 +58,9 @@ You can DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 5. Options page.
 
 == Changelog ==
+
+= 1.6.6 =
+* fix for sort option
 
 = 1.6.5 =
 * fix for wp_dropdown_pages filter

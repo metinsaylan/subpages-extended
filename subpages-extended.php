@@ -43,7 +43,6 @@ class shailan_SubpagesWidget extends WP_Widget {
 				'exceptme' => false,
 				'childof' => '',
 				'sort_by' => 'menu_order, post_title',
-				/* 'use_menu_labels' => false, */
 				'link_on_title' => false,
 				'rel' => ''
 			);
@@ -60,8 +59,6 @@ class shailan_SubpagesWidget extends WP_Widget {
 			$use_parent_title = (bool) $use_parent_title;
 			/* $use_menu_labels = (bool) $use_menu_labels; */
 			$link_on_title = (bool) $link_on_title;
-
-			// echo "<pre>".print_r($instance, true)."</pre>";
 
 			$is_visible = false;
 
@@ -200,11 +197,10 @@ class shailan_SubpagesWidget extends WP_Widget {
 		<p><label for="<?php echo $this->get_field_id('exclude'); ?>"><?php _e('Exclude:'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#exclude">?</a> <input class="widefat" id="<?php echo $this->get_field_id('exclude'); ?>" name="<?php echo $this->get_field_name('exclude'); ?>" type="text" value="<?php echo $exclude; ?>" /></label><br />
 		<small>Page IDs, separated by commas.</small></p>
 
-		<p><label for="<?php echo $this->get_field_id('sort_column'); ?>"><?php _e('Sort by :'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#sort-by">?</a> <select name="<?php echo $this->get_field_name('sort_column'); ?>" id="<?php echo $this->get_field_id('sort_column'); ?>" ><?php
+		<p><label for="<?php echo $this->get_field_id('sort_by'); ?>"><?php _e('Sort by :'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#sort-by">?</a> <select name="<?php echo $this->get_field_name('sort_by'); ?>" id="<?php echo $this->get_field_id('sort_by'); ?>" ><?php
 
-	if( empty($sort_column) ){ $sort_column = ''; }
   foreach ($this->sort_options as $value=>$key) {
-		$option = '<option value="'. $key .'" '. ( $key == $sort_column ? ' selected="selected"' : '' ) .'>';
+		$option = '<option value="'. $key .'" '. ( $key == $sort_by ? ' selected="selected"' : '' ) .'>';
 		$option .= $value;
 		$option .= '</option>\n';
 		echo $option;

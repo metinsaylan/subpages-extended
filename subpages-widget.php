@@ -1,13 +1,13 @@
 <?php
-/*
-Plugin Name: Subpages Extended
-Plugin URI: https://metinsaylan.com/wordpress/plugins/subpages-widget/
-Description: List sub pages of any page, using shortcode and widget. Auto-insert can be enabled on settings page.
-Version: 1.6.4
-Author: Metin Saylan
-Author URI: https://metinsaylan.com/
-Text Domain: subpages-extended
-*/
+/**
+ * Plugin Name: Subpages Extended
+ * Plugin URI: https://wpassist.me/plugins/subpages-widget/
+ * Description: Display a list of sub pages using widget, shortcode or auto-insert functionality.
+ * Version: 1.7
+ * Author: WPAssist
+ * Author URI: https://wpassist.me/
+ * Text Domain: subpages-extended
+ */
 
 if ( ! defined( 'ABSPATH' ) ) {
 	die( 'Invalid request.' );

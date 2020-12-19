@@ -1,6 +1,19 @@
 ## Subpages Extended Changelog
 
-All changes to [Subpages Extended Widget](http://metinsaylan.com/projects/wordpress/subpages-extended/) can be found on this page.
+All changes to [Subpages Extended Widget](https://wpassist.me/projects/wordpress/subpages-extended/) can be found on this page.
+
+### 1.6.5
+* fix for wp_dropdown_pages filter
+* fix for sort_column error
+* update plugin documentation links
+
+### 1.6.4
+* Fix options page bug for WPA Share plugin.
+
+### 1.6.3
+* Updates for options page.
+* Updated tested-up-to tag.
+* Improved security for direct php calls.
 
 ### 1.6.2
 * Fixed options page capability. Now users with activate_plugins capability can update options.

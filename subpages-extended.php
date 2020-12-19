@@ -20,7 +20,7 @@ class shailan_SubpagesWidget extends WP_Widget {
 			);
 
 			$this->alt_option_name = 'widget_shailan_subpages';
-			$this->help_page = 'http://metinsaylan.com/docs/subpages-extended-help/';
+			$this->help_page = 'https://wpassist.me/docs/subpages-extended-help/';
 
 			if ( is_active_widget(false, false, $this->id_base) )
 				add_action( 'wp_head', array(&$this, 'styles') );
@@ -201,11 +201,13 @@ class shailan_SubpagesWidget extends WP_Widget {
 		<small>Page IDs, separated by commas.</small></p>
 
 		<p><label for="<?php echo $this->get_field_id('sort_column'); ?>"><?php _e('Sort by :'); ?> <a class="help-link" target="_blank" rel="noopener" href="<?php echo $this->help_page; ?>#sort-by">?</a> <select name="<?php echo $this->get_field_name('sort_column'); ?>" id="<?php echo $this->get_field_id('sort_column'); ?>" ><?php
+
+	if( empty($sort_column) ){ $sort_column = ''; }
   foreach ($this->sort_options as $value=>$key) {
-  	$option = '<option value="'. $key .'" '. ( $key == $sort_column ? ' selected="selected"' : '' ) .'>';
-	$option .= $value;
-	$option .= '</option>\n';
-	echo $option;
+		$option = '<option value="'. $key .'" '. ( $key == $sort_column ? ' selected="selected"' : '' ) .'>';
+		$option .= $value;
+		$option .= '</option>\n';
+		echo $option;
   }
  ?>
 </select></label></p>

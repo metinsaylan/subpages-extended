@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
 function shailan_subpages_dropdown_pages($args = '') {
 
 	$defaults = array(
@@ -31,7 +35,7 @@ function shailan_subpages_dropdown_pages($args = '') {
 		$output .= "</select>\n";
 	}
 
-	$output = apply_filters('wp_dropdown_pages', $output);
+	$output = apply_filters( 'wp_dropdown_pages', $output );
 
 	if ( $echo )
 		echo $output;

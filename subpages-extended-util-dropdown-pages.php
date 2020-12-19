@@ -7,10 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 function shailan_subpages_dropdown_pages($args = '') {
 
 	$defaults = array(
-		'depth' => 0, 'child_of' => 0,
-		'selected' => 0, 'echo' => 1,
-		'name' => 'page_id', 'id' => '',
-		'show_option_none' => '', 'show_option_no_change' => '',
+		'depth' => 0, 
+		'child_of' => 0,
+		'selected' => 0, 
+		'echo' => 1,
+		'name' => 'page_id', 
+		'id' => '',
+		'show_option_none' => '', 
+		'show_option_no_change' => '',
 		'option_none_value' => ''
 	);
 
@@ -35,7 +39,7 @@ function shailan_subpages_dropdown_pages($args = '') {
 		$output .= "</select>\n";
 	}
 
-	$output = apply_filters( 'wp_dropdown_pages', $output );
+	$output = apply_filters( 'wp_dropdown_pages', $output, $r, $pages );
 
 	if ( $echo )
 		echo $output;

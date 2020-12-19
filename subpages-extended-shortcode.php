@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
 function shailan_subpages_shortcode($atts) {
 
 	global $post, $subpages_indexes;

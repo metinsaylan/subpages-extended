@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
 // Filters page title so that Subpages Extended menu title will be used
 function shailan_page_title_filter( $title, $id  ){
 

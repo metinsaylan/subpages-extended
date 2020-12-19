@@ -2,6 +2,14 @@
 
 All changes to [Subpages Extended Widget](http://metinsaylan.com/projects/wordpress/subpages-extended/) can be found on this page.
 
+### 1.6.2
+* Fixed options page capability. Now users with activate_plugins capability can update options.
+
+### 1.6
+* Fixed create_function error
+* Updated options page styling
+* Improved auto-insert performance
+
 ### 1.5.3
 * Update link styles, open help links on new tab
 * Remove deprecated screen_icon function call

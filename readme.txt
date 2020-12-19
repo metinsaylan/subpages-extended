@@ -1,10 +1,10 @@
 === Subpages Extended ===
 Contributors: mattsay
-Donate link: http://metinsaylan.com/live/donate
+Donate link: http://wpassist.me/donate
 Tags: page list, pages, list pages, subpages, widget, shortcode, navigation, menu, auto, index, list, children, wp_list_pages
 Requires at least: 5.0
-Tested up to: 5.2.2
-Stable tag: 1.6.4
+Tested up to: 5.6
+Stable tag: 1.6.5
 
 List subpages of your WordPress pages easily! Comes with a `[subpages]` shortcode.
 
@@ -27,11 +27,11 @@ Basic shortcode usage:
 
 *Documentation & Simple Tutorials*
 
-* [Subpages Extended Shortcode Usage](https://metinsaylan.com/docs/subpages-extended-shortcode/)
-* [Changing page sorting option (eg. using page order)](https://metinsaylan.com/2052/subpages-extended-sorting-your-pages-list-with-shortcode/)
-* [All posts tagged `Subpages Extended`](https://metinsaylan.com/tag/subpages-extended/)
+* [Subpages Extended Shortcode Usage](https://wpassist.me/docs/subpages-extended-shortcode/)
+* [Changing page sorting option (eg. using page order)](https://wpassist.me/2052/subpages-extended-sorting-your-pages-list-with-shortcode/)
+* [All posts tagged `Subpages Extended`](https://wpassist.me/tag/subpages-extended/)
 
-If you like this plugin, please [donate](http://metinsaylan.com/live/donate/).
+If you like this plugin, please [donate](https://wpassist.me/donate/).
 
 Please report issues on [Github Issues Page](https://github.com/metinsaylan/subpages-extended/issues) or DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 Visit source on [github](https://github.com/metinsaylan/subpages-extended)
@@ -59,13 +59,10 @@ You can DM me on twitter [@metinsaylan](https://twitter.com/metinsaylan).
 
 == Changelog ==
 
-= 1.6.4 = 
-* Fix options page bug for WPA Share plugin.
+= 1.6.5 =
+* fix for wp_dropdown_pages filter
+* fix for sort_column error
+* update plugin documentation links
 
-= 1.6.3 =
-* Updates for options page.
-* Updated tested-up-to tag.
-* Improved security for direct php calls.
-* New features coming soon ;)
 
 [View Previous Versions](https://github.com/metinsaylan/subpages-extended/blob/master/CHANGELOG.md)

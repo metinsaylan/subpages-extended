@@ -1,0 +1,96 @@
+.wpa_options-page{ 
+    font-size: 16px
+}
+
+.wpa_options .card{ 
+    background: #fff; 
+    padding: 15px;
+    box-shadow: rgba(0,0,0,0.2) 0 2px 5px;
+    border-radius: 8px;
+    border: 0;
+}
+
+.wpa_options .card.primary {
+    background: #FFF59D;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 1024px){
+    .wpa_options-page{ 
+        display: flex;
+    }
+
+    .wpa_options-c1 {
+        flex: 1 1 auto;
+    }
+
+    .wpa_options-c2 {
+        flex: 0 1 300px; 
+    }
+
+    .sb {
+        padding: 0 15px 0;
+    }
+}
+
+/*Navigation*/
+.wpa_options-nav{ 
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: #ccc 0 0 2px;
+    line-height: 40px;
+    margin-top: 10px;
+}
+
+.wpa_options-nav .nav-link{ 
+    text-decoration: none;
+    display: inline-block; 
+    padding: 0 15px;
+}
+
+.wpa_options-nav .nav-link:hover{ background-color: #eee }
+
+/* Options */
+.wpa_options-wrapper{
+    max-width: 780px; 
+}
+
+.wpa_options-section{
+    background: #fff; 
+    padding: 15px;
+    box-shadow: rgba(0,0,0,0.2) 0 2px 5px;
+    border-radius: 8px;
+}
+
+.wpa_options-section-footer {
+    padding: 15px;
+    background: #ddd;
+}
+
+.wpa_options-p{ 
+    padding: 15px;
+}
+
+.wpa_options-input{ 
+    border-bottom: 1px solid #ddd;
+    padding: 8px 0
+}
+
+.wpa_options-input label{ 
+    min-width: 240px;
+    display: inline-block;
+}
+
+.wpa_options-input input[type="text"],
+.wpa_options-input textarea, 
+.wpa_options-input select {
+    width: 330px;
+    font-size: 16px;
+    padding: 5px 8px;
+    border-radius: 4px;
+    background: #ffc;
+}
+
+.wpa_options-input small{ 
+    color: #777;
+}

@@ -1,15 +1,25 @@
 <?php
 /*
 Plugin Name: Subpages Extended
-Plugin URI: https://metinsaylan.com/projects/wordpress/subpages-extended/
-Description: List sub pages of any page, using shortcode and widget. Visit <a href="options-general.php?page=subpages-extended">settings page</a> for auto-insert option.
-Version: 1.6
+Plugin URI: https://metinsaylan.com/wordpress/plugins/subpages-widget/
+Description: List sub pages of any page, using shortcode and widget. Auto-insert can be enabled on settings page.
+Version: 1.6.4
 Author: Metin Saylan
 Author URI: https://metinsaylan.com/
 Text Domain: subpages-extended
 */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
+define( 'MS_SE_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'MS_SE_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
 global $subpages_indexes;
+global $subpages_extended;
+
+include_once( 'subpages-extended-core.php' );
 
 // Utilities
 include_once( 'class-shailan-walker-page.php' );
@@ -23,20 +33,22 @@ include_once( 'subpages-extended-filter-auto-insert.php' );
 include_once( 'subpages-extended-filter-page-title.php' );
 
 if( is_admin() ){
-  include_once( 'wpa/wpa-plugins-core.php' );
-  
   // Pages dropdown on widget options
   include_once( 'subpages-extended-util-dropdown-pages.php' );
 
   // Options & meta boxes
-  include_once( 'subpages-extended-admin.php' );
   include_once( 'subpages-menu-label-metabox.php' );
 
   // Settings links
   add_filter( 'plugin_action_links_' . plugin_basename(__FILE__), 'wpa_sp_add_settings_link' );
   function wpa_sp_add_settings_link( $links ) {
     $links[] = '<a href="options-general.php?page=subpages-extended">Settings</a>';
-    $links[] = '<a href="https://metinsaylan.com/donate">Donate</a>';
     return $links;
   }
+}
+
+/* Thin wrap for wpa_plugin */
+function get_subpages_extended_option( $key, $default ){
+    global $subpages_extended;
+    return $subpages_extended->get_setting( $key, $default );
 }

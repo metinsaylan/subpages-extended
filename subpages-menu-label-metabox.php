@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	die( 'Invalid request.' );
+}
+
 add_action('admin_init', 'subpages_add_custom_box', 1);
 add_action('save_post', 'subpages_save_postdata');
 
